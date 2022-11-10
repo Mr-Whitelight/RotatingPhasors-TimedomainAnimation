@@ -4,14 +4,6 @@ clc
 
 % SETUP ===================================================================
 % all physical quantities in S.I. units unless stated otherwise
-% Setup for animated gif
-     ag_name = 'ag_Cagvoltage.gif';   % file name for animated gif
-%  Delay in seconds before displaying the next image  
-      delay = 0.20;  
-%  Frame counter start
-      nt = 1;
-% Save flagS = 1; NOt save flagS = 0;
-      flagS = 0;
                              
 % Voltage
 A = 10;                     % constant A
@@ -76,18 +68,5 @@ for c = 1 : 200%N
    
    axis equal
    axis off
-   pause(0.1)
- 
-if flagS == 1 
-  frame = getframe(1);
-  im = frame2im(frame);
-  [imind,cm] = rgb2ind(im,256);
-%  On the first loop, create the file. In subsequent loops, append.
-     if nt == 1
-        imwrite(imind,cm,ag_name,'gif','DelayTime',delay,'loopcount',inf);
-     else
-        imwrite(imind,cm,ag_name,'gif','DelayTime',delay,'writemode','append');
-     end
-        nt = nt+1; 
+   pause(0.01)
 end
-end  % if
