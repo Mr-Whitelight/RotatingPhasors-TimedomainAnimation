@@ -6,13 +6,13 @@ clc
 % all physical quantities in S.I. units unless stated otherwise
                              
 % Voltage
-A = 10;                     % constant A
-T = 20;                      % period
-w = 2*pi/T;
-N = 200;                   % number of frames for animation
+A = 10;                     % Amplitude of the AC signal
+T = 20;                      % Period of the AC signal
+w = 2*pi/T;                  % Angular speed of the AC phasor
+N = 400;                   % Number of frames for animation; smaller the value, the more triagular the sinewave will be
 t = linspace(0,3*T,N);              % time increment
-v  = A .* sin(2*pi*t/T);
-%vP = A .* cos(2*pi*t/T);
+v  = A .* sin(2*pi*t/T);    % Mathmatic function of the AC Waveform
+%vP = A .* cos(2*pi*t/T);   % Use this if you want a Cosine Waveform
 
 % GRAPHICS ================================================================
 figure(1)
@@ -31,7 +31,7 @@ xc = A .* cos(p);
 yc = A .* sin(p);
 
    
-for c = 1 : 200%N
+for c = 1 : N
     hold off
    
    axis equal
@@ -67,6 +67,15 @@ for c = 1 : 200%N
    set(gca,'FontSize',12);
    
    axis equal
-   axis off
+   axis on
    pause(0.01)
+ 
 end
+
+
+
+
+
+
+
+
