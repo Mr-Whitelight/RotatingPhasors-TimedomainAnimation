@@ -1,3 +1,10 @@
+% File name: PhasorAnimation.m
+% Author: CHAN Yun Sang, Ethan; CHAN Ho Kwan, Tony; SIU Pui Yin, Benji
+% Department of Electrical Engineering, The Hong Kong Polytechnic
+% University
+% Email: ethan.ys.chan@connect.polyu.hk
+% Demonstration program: Phasor and space vector
+
 clear all
 close all
 clc
@@ -69,13 +76,4 @@ for c = 1 : N
    axis equal
    axis on
    pause(0.01)
- 
 end
-
-
-
-
-
-
-
-
